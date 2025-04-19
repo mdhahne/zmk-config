@@ -30,15 +30,15 @@
                 utility_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |       |       |   =   |   /   |   *   | DEL   |          | BT 1  | BT 2  | BT 3  | BT 4  |       |       |
-// |       |   -   |   7   |   8   |   9   | BSPC  |          |       |       |       |       |       |       |
-// |       |   +   |   4   |   5   |   6   |       |          |       |       |       |       |       |       |
-// |       |  ENT  |   1   |   2   |   3   |       |          | MUTE  |VOL DN |VOL UP |       |       |       |
+// |       |   -   |   7   |   8   |   9   | BSPC  |          |       |       |  up   |       |       |       |
+// |       |   +   |   4   |   5   |   6   |       |          |       |  left | down  | right |       | pg up |
+// |       |  ENT  |   1   |   2   |   3   |       |          | MUTE  |VOL DN |VOL UP |       |       | pg dn |
 // |       |       |   0   |       |   .   |  ENT  |          | PLAY  |BRI DN |BRI UP |       |       |       |
                         bindings = <
-   &trans    &trans         &kp KP_EQUAL &kp KP_DIVIDE   &kp KP_MULTIPLY  &kp DEL                &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5
-   &trans    &kp KP_MINUS   &kp KP_N7    &kp KP_N8       &kp KP_N9        &kp BSPC               &trans       &trans         &trans        &trans        &trans        &trans
-   &trans    &kp KP_PLUS    &kp KP_N4    &kp KP_N5       &kp KP_N6        &trans                 &trans       &trans         &trans        &trans        &trans        &trans
-   &trans    &kp RET        &kp KP_N1    &kp KP_N2       &kp KP_N3        &trans                 &kp K_MUTE   &kp K_VOL_DN   &kp K_VOL_UP  &trans        &trans        &trans
+   &trans    &trans         &kp KP_EQUAL &kp KP_DIVIDE   &kp KP_MULTIPLY  &kp DEL              &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5
+   &trans    &kp KP_MINUS   &kp KP_N7    &kp KP_N8       &kp KP_N9        &kp BSPC             &trans       &trans         &kp UP        &trans        &trans        &trans
+   &trans    &kp KP_PLUS    &kp KP_N4    &kp KP_N5       &kp KP_N6        &trans               &trans       &kp LEFT       &kp DOWN      &kp RIGHT     &trans        &kp PG_UP
+   &trans    &kp RET        &kp KP_N1    &kp KP_N2       &kp KP_N3        &trans               &kp K_MUTE   &kp K_VOL_DN   &kp K_VOL_UP  &trans        &trans        &kp PG_DN
    &trans    &trans         &kp KP_N0    &trans          &kp KP_DOT       &kp RET              &kp K_PP     &kp C_BRI_DN   &kp C_BRI_UP  &trans        &trans        &trans
                         >;
                 };
@@ -62,15 +62,15 @@
                 nav_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |       |       |       |       |       |       |          |       |       |       |       | DEL   |  BSPC |
-// |       |       |       |       |       |  CTRL |          | pg up |       |  up   |       |       |       |
-// |       |       |       |       |       |  ALT  |          | up dn | left  | down  | right |       |       |
-// |       |       |       |       |       |  GUI  |          | MUTE  |VOL DN |VOL UP |       |       |       |
+// |       |       |       |       |       |  CTRL |          |       |       |  up   |       |       |       |
+// |       |       |       |       |       |  ALT  |          |       | left  | down  | right |       | pg up |
+// |       |       |       |       |       |  GUI  |          | MUTE  |VOL DN |VOL UP |       |       | pg dn |
 // |       |       |       |       |       |       |          | PLAY  |BRI DN |BRI UP |       |       |       |
                         bindings = <
    &trans    &trans   &trans    &trans     &trans     &trans               &trans      &trans        &trans       &trans     &kp DEL  &kp BSPC
-   &trans    &trans   &trans    &trans     &kp LCTRL  &trans               &kp PG_UP   &trans        &kp UP       &trans     &trans   &trans
-   &trans    &trans   &trans    &trans     &kp LALT   &trans               &kp PG_DN   &kp LEFT      &kp DOWN     &kp RIGHT  &trans   &trans
-   &trans    &trans   &trans    &trans     &kp LGUI   &trans               &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP &trans     &trans   &trans
+   &trans    &trans   &trans    &trans     &kp LCTRL  &trans               &trans      &trans        &kp UP       &trans     &trans   &trans
+   &trans    &trans   &trans    &trans     &kp LALT   &trans               &trans      &kp LEFT      &kp DOWN     &kp RIGHT  &trans   &kp PG_UP
+   &trans    &trans   &trans    &trans     &kp LGUI   &trans               &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP &trans     &trans   &kp PG_DN
    &trans    &trans   &trans    &trans     &trans     &trans               &kp K_PP    &kp C_BRI_DN  &kp C_BRI_UP &trans     &trans   &trans
                         >;
                 };
